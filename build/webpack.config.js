@@ -3,6 +3,8 @@ const HTMLWebpackPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const ProgressBarPlugin = require('progress-bar-webpack-plugin')
+const WebpackBuildNotifierPlugin = require('webpack-build-notifier');
 
 const resolve = dir => path.join(__dirname, '..', dir)
 const devMode = (process.env.NODE_ENV === 'development')
@@ -54,12 +56,6 @@ module.exports = {
         test: /\.scss$/,
         use: [
           devMode ? 'vue-style-loader' : MiniCssExtractPlugin.loader,
-          // {
-          //   loader: 'style-loader',
-          //   options: {
-          //     sourceMap: true
-          //   }
-          // },
           {
             loader: 'css-loader',
             options: {
@@ -115,7 +111,9 @@ module.exports = {
     }),
     new CleanWebpackPlugin(['dist'], {
       root: path.join(__dirname, '../')
-    })
+    }),
+    new ProgressBarPlugin(),
+    new WebpackBuildNotifierPlugin()
   ],
   output: {
     filename: '[name].[hash:5].js',

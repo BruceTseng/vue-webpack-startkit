@@ -34,9 +34,11 @@
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
     "postcss-loader": "^3.0.0",
+    "progress-bar-webpack-plugin": "^1.12.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.0",
+    "webpack-build-notifier": "^0.1.30",
     "webpack-dev-server": "^3.1.14"
   },
   "scripts": {

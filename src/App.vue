@@ -1,5 +1,6 @@
 <template>
   <div class="example">
+    <a href="">{{msg}}</a>
     <img src="./assets/images/logo.png" alt="">
   </div>
 </template>
@@ -8,7 +9,7 @@
 export default {
   data () {
     return {
-      msg: 'Hello Vue!'
+      msg: 'Hello Vue'
     }
   }
 }
@@ -16,13 +17,14 @@ export default {
 
 <style lang='scss' scoped>
 .example {
-  color: red;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
   img {
-    width: 100px;
-    height: 100px;
+    width: 300px;
+    height: 300px;
   }
   a {
     color: green;
