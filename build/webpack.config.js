@@ -4,7 +4,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
-const WebpackBuildNotifierPlugin = require('webpack-build-notifier');
+const WebpackBuildNotifierPlugin = require('webpack-build-notifier')
 
 const resolve = dir => path.join(__dirname, '..', dir)
 const devMode = (process.env.NODE_ENV === 'development')
